@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message for you </title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff5f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cat-container {
+      position: relative;
+      width: 300px;
+      height: auto;
+    }
+
+    .cat-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff6b81;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff4f6d;
+    }
+
+    .message {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff0f3;
+      border: 2px dashed #ff6b81;
+      border-radius: 12px;
+      max-width: 500px;
+      opacity: 0;
+      transition: opacity 1s ease;
+      white-space: pre-wrap;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .message.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="cat-container">
+    <img src="https://img.freepik.com/premium-vector/kawaii-cute-valentines-cat-holding-envelope-with-valentine-its-paws_511725-1149.jpg" 
+         alt="Kawaii cat holding an envelope" 
+         class="cat-img">
+  </div>
+
+  <div class="button-group">
+    <button class="button" onclick="openEnvelope()">Open Envelope 💌</button>
+    <button class="button" onclick="closeEnvelope()">Close Envelope 🔒</button>
+  </div>
+
+  <div id="message" class="message">
+    the most beautiful architect 💖  
+    You did great job today — I’m really proud of you.  
+    And if you don’t feel pretty well,  
+    Don’t worry a lot about this life, it doesn’t matter.  
+    Someday you gonna look back and say:  
+    “It was hard, but I made it.”  
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById('message').classList.add('visible');
+    }
+
+    function closeEnvelope() {
+      document.getElementById('message').classList.remove('visible');
+    }
+  </script>
+</body>
+</html>
+
